@@ -1,0 +1,20 @@
+﻿@model PermissionReportWeb.Models.DTOs.AdminReportItem
+@{
+    ViewBag.Title = "Owners and Admins";
+}
+<div>
+    <h2>@ViewBag.Title</h2>
+    <h3>@ViewBag.Message</h3>
+</div>
+<div>
+    <h3>Owner: @Model.SiteCollectionOwner </h3>
+    <h3>Site Collection Admins:</h3>
+    <ul>
+        @foreach (var item in Model.SiteCollectionAdmins)
+        {
+            <li>
+                @Html.DisplayFor(modelItem => item)
+            </li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,27 @@
+﻿@model PermissionReportWeb.Models.DTOs.PermissionReport
+@{
+    ViewBag.Title = "All Items With Unique Permissions";
+}
+<div>
+    <h2>@ViewBag.Title</h2>
+    <h3>@ViewBag.Message</h3>
+</div>
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <th>Web</th>
+            <th>List Name</th>
+            <th>Item Name</th>
+            <th>Url</th>
+        </tr>
+        @foreach (var modelItem in Model.List)
+        {
+            <tr>
+                <td>@modelItem.Web</td>
+                <td>@modelItem.ListName</td>
+                <td>@modelItem.ItemName</td>
+                <td>@modelItem.Url</td>
+            </tr>
+        }
+    </table>
+</div>
